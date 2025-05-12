@@ -1,0 +1,114 @@
+:root {
+  --color-bg: #0f0f12;
+  --color-text: #f4f4f5;
+  --color-primary: #4285f4;
+  --color-secondary: #0f9d58;
+  --color-accent: #db4437;
+  --color-dark: #1a1a20;
+  --color-light: #e0e0e0;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --border-radius: 0.5rem;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  padding: 6rem var(--spacing-lg) var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  height: 4px;
+  width: 60px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.85;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 5rem var(--spacing-md) var(--spacing-md);
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    padding: 4rem var(--spacing-sm) var(--spacing-md);
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}

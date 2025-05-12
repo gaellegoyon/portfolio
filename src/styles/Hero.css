@@ -1,0 +1,125 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 6rem);
+  padding-top: 2rem;
+}
+
+.hero-title {
+  font-size: 6rem;
+  font-weight: 800;
+  margin: 0 0 var(--spacing-sm);
+  line-height: 1;
+  background: linear-gradient(
+    to right,
+    var(--color-text),
+    var(--color-primary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-lg);
+  background: linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-accent)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-description p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button.primary {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.4);
+}
+
+.cta-button.primary:hover {
+  box-shadow: 0 6px 20px rgba(66, 133, 244, 0.6);
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+}
+
+.cta-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-description p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
