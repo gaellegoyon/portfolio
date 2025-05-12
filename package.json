@@ -11,14 +11,13 @@
   },
   "dependencies": {
     "@react-spring/three": "^9.7.5",
-    "@react-three/drei": "^10.0.7",
-    "@react-three/fiber": "^9.1.2",
+    "@react-three/drei": "^9.82.6",
+    "@react-three/fiber": "8.13.7",
     "framer-motion": "^12.11.0",
     "gsap": "^3.13.0",
     "portfolio": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-refresh": "^0.14.0",
     "react-router-dom": "^7.6.0",
     "three": "^0.176.0"
   },
